@@ -2,7 +2,7 @@
 Reverses the the operation that reduced image set variants into unique blocks.
 
 # Usage
-
+```
 usage: undice.py [-h] [-o OUTPUT_DIRECTORY] [--verbose] [--use-unitypack]
                  [fpath [fpath ...]]
 
@@ -30,7 +30,8 @@ optional arguments:
                         manipulation (https://github.com/HearthSim/UnityPack)
                         (false by default as it has problems extracting
                         certain images correctly)
-
+```
+```
 usage: undice_afterprocess.py [-h] [-o OUTPUT_DIRECTORY] [--verbose]
                               [-t PROCESS_TYPE] [-w]
                               fpath
@@ -64,9 +65,12 @@ optional arguments:
                         combination of valid number/letters works.
   -w, --overwrite       If output file already exists, don't skip and
                         overwrite it.
+```
 
 # Examples
 
 With files found in `chara.mpk` from Memories Off -Innocent Fille-
+
 `undice.py son_ba_.mvl -o out/` -> Image parts set placed in `out/son_ba/`
+
 `undice_afterprocess.py out/son_ba/ -o processed/son_ba/ -t 1ab` -> Image varients set placed in `processed/son_ba/`
