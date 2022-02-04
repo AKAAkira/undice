@@ -2,6 +2,7 @@
 Reverses the the operation that reduced image set variants into unique blocks.
 
 # Usage
+## undice.py
 ```
 usage: undice.py [-h] [-o OUTPUT_DIRECTORY] [--verbose] [--use-unitypack]
                  [fpath [fpath ...]]
@@ -31,6 +32,8 @@ optional arguments:
                         (false by default as it has problems extracting
                         certain images correctly)
 ```
+## undice_afterprocess.py
+For some operations I found may be needed after undicing.
 ```
 usage: undice_afterprocess.py [-h] [-o OUTPUT_DIRECTORY] [--verbose]
                               [-t PROCESS_TYPE] [-w]
