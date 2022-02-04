@@ -71,6 +71,6 @@ optional arguments:
 
 With files found in `chara.mpk` from Memories Off -Innocent Fille-
 
-`undice.py son_ba_.mvl -o out/` -> Image parts set placed in `out/son_ba/`
+`undice.py son_ba_.mvl -o out/` -> Image parts set, undiced from `son_ba_.mvl` and `son_ba.png`, placed in `out/son_ba/`
 
-`undice_afterprocess.py out/son_ba/ -o processed/son_ba/ -t 1ab` -> Image varients set placed in `processed/son_ba/`
+`undice_afterprocess.py out/son_ba/ -o processed/son_ba/ -t 1ab` -> Image varients set, alpha-composited (`1`), solid-color trimmed (`b`) with fuzzy border check (`a`), placed in `processed/son_ba/`
