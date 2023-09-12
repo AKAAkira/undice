@@ -1,5 +1,5 @@
 # undice
-Reverses the the operation that reduced image set variants into unique blocks.
+Command-line script to reverse the result of [Sprite Dicing](https://github.com/Elringus/SpriteDicing), reading off their relevant info files to rearrange unique-block images back into their contituting sprites.
 
 # Usage
 ## undice.py
@@ -7,7 +7,9 @@ Reverses the the operation that reduced image set variants into unique blocks.
 usage: undice.py [-h] [-o OUTPUT_DIRECTORY] [--verbose] [--use-unitypack]
                  [fpath [fpath ...]]
 
-Unscrambles diced textures found in assetbundle or MVL/JSON + image files.
+Unscrambles diced textures sometimes found in unity assetbundles, created via
+https://github.com/Elringus/SpriteDicing. The necessary input files for this
+script are the unique-block image files and their info files (either JSON or MVL).
 
 positional arguments:
   fpath                 File paths to be passed along to script that needs
@@ -60,12 +62,14 @@ optional arguments:
                         off from previous base images. E.g. AA.png will be
                         treated as base for AAA.png and AAB.png, while
                         AAAA.png and AAAB.png will treat the former as base
-                        but not the latter. a: Applies edge fuzz transparency
-                        (better trim, but may over-erase subtle art details
-                        starting from the edges) b: Solid colour trim (rids
-                        edges with any uniform colour, not just transparent
-                        pixels; not for BG art, especially solid colour) Any
-                        combination of valid number/letters works.
+                        but not the latter.
+                        a: Applies edge fuzz transparency (better trim, but
+                        may over-erase subtle art details starting from the
+                        edges)
+                        b: Solid colour trim (rids edges with any uniform
+                        colour, not just transparent pixels; not for BG art,
+                        especially solid colour)
+                        Any combination of valid number/letters works.
   -w, --overwrite       If output file already exists, don't skip and
                         overwrite it.
 ```
